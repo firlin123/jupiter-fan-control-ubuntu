@@ -1,4 +1,4 @@
-#!/usr/bin/python -u
+#!/usr/bin/python3 -u
 """jupiter-fan-controller"""
 import signal
 import os
