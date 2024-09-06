@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_install:
+	mkdir -p $(CURDIR)/debian/jupiter-fan-control
+	cp -r $(CURDIR)/usr $(CURDIR)/debian/jupiter-fan-control/
+

@@ -1,0 +1,229 @@
+jupiter-fan-control (20240523.3) unstable; urgency=medium
+
+  * 689b3be - move initialize_log_file to top of loop_control (Adam Weld <weld@valvesoftware.com>)
+  * 72ce8e9 - Revert "explicit old and new logfile paths" (Adam Weld <weld@valvesoftware.com>)
+  * d0acf9b - explicit old and new logfile paths (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Thu, 23 May 2024 14:34:09 -0700
+
+jupiter-fan-control (20240523.2) unstable; urgency=medium
+
+  * 7b7aab6 - write unwritten rows before closing logfile on exit (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Thu, 23 May 2024 13:37:02 -0700
+
+jupiter-fan-control (20240523.1) unstable; urgency=medium
+
+  * c065a35 - Weld/log rotation (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Thu, 23 May 2024 20:19:38 +0000
+
+jupiter-fan-control (20240118.1) unstable; urgency=medium
+
+  * 535aebd - remove dry-run (Adam Weld <adam.weld@gmail.com>)
+
+ -- Adam Weld <adam.weld@gmail.com>  Thu, 18 Jan 2024 09:04:07 -0800
+
+jupiter-fan-control (20231229.1) unstable; urgency=medium
+
+  * e3bb55b - reformat (Adam Weld <adam.weld@gmail.com>)
+  * b38422a - format (Adam Weld <adam.weld@gmail.com>)
+  * 68d0ca7 - dry run (Adam Weld <weld@valvesoftware.com>)
+  * 660bab6 - dry run (Adam Weld <weld@valvesoftware.com>)
+  * 1b3ab2b - log every (Adam Weld <weld@valvesoftware.com>)
+  * e846bf9 - log every (Adam Weld <weld@valvesoftware.com>)
+  * 10d4613 - log every (Adam Weld <weld@valvesoftware.com>)
+  * 905a3f8 - fixed (Adam Weld <weld@valvesoftware.com>)
+  * 864dd9a - fixed (Adam Weld <weld@valvesoftware.com>)
+  * 8892158 - fixed (Adam Weld <weld@valvesoftware.com>)
+  * 8dcfd2a - why isnt the config updating (Adam Weld <weld@valvesoftware.com>)
+  * 18486f7 - updoots (Adam Weld <weld@valvesoftware.com>)
+  * 40f1ac6 - updoots (Adam Weld <weld@valvesoftware.com>)
+  * 63af464 - updoots (Adam Weld <weld@valvesoftware.com>)
+  * b37a2af - updoots (Adam Weld <weld@valvesoftware.com>)
+  * 4e1eb22 - updoots (Adam Weld <weld@valvesoftware.com>)
+  * 338e683 - updoots (Adam Weld <weld@valvesoftware.com>)
+  * d9957bb - updoots (Adam Weld <weld@valvesoftware.com>)
+  * 0412337 - updoots (Adam Weld <weld@valvesoftware.com>)
+  * bd77b08 - up (Adam Weld <weld@valvesoftware.com>)
+  * 22a1ee2 - up (Adam Weld <weld@valvesoftware.com>)
+  * 0fdea04 - up (Adam Weld <weld@valvesoftware.com>)
+  * 8533556 - first attempt at hysteresis (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Fri, 29 Dec 2023 19:12:00 +0000
+
+jupiter-fan-control (20231204.1) unstable; urgency=medium
+
+  * 89372d0 - int cast to reduce filesize (Adam Weld <weld@valvesoftware.com>)
+  * 03e816b - add timestamp to log (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Mon, 4 Dec 2023 15:18:35 -0800
+
+jupiter-fan-control (20231114.3) unstable; urgency=medium
+
+  * 5da180c - fix if else (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Tue, 14 Nov 2023 22:59:12 +0000
+
+jupiter-fan-control (20231114.2) unstable; urgency=medium
+
+  * 8ed0e2e - fix variable name (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Tue, 14 Nov 2023 14:35:37 -0800
+
+jupiter-fan-control (20231113.2) unstable; urgency=medium
+
+  * ca55d9e - add debug print (Adam Weld <weld@valvesoftware.com>)
+  * af8b3e2 - add debug print (Adam Weld <weld@valvesoftware.com>)
+  * 258f9a3 - add debug print (Adam Weld <weld@valvesoftware.com>)
+  * 4140808 - update compatibility check for galileo and jupiter compat (Adam Weld <weld@valvesoftware.com>)
+  * 57bb1e7 - archive previous log (Adam Weld <weld@valvesoftware.com>)
+  * 7fd75b1 - add journal message if a max temp is hit (Adam Weld <weld@valvesoftware.com>)
+  * 99031b0 - cleanup (Adam Weld <weld@valvesoftware.com>)
+  * 6a045f1 - galileo robustness improvements (Adam Weld <weld@valvesoftware.com>)
+  * 6c60cf1 - enable journal output of startup/shutdown (Adam Weld <weld@valvesoftware.com>)
+  * aa699cf - initial commit (Adam Weld <weld@valvesoftware.com>)
+  * 2ad7854 - disable journal spew (Adam Weld <adam.weld@gmail.com>)
+  * ddd9da0 - update galileo config and enable logging for debug (Adam Weld <adam.weld@gmail.com>)
+  * 7ad1dfc - Jordand wip v2dev (Jordan Dykstra <jordand@valvesoftware.com>)
+
+ -- John Schoenick <johns@valvesoftware.com>  Mon, 13 Nov 2023 20:33:23 -0800
+
+jupiter-fan-control (20230209.1) unstable; urgency=medium
+
+  * f7880fc - add support for kernel 6.1 renaming of system hwmon (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Wed, 8 Feb 2023 11:05:29 -0800
+
+jupiter-fan-control (20221107.1) unstable; urgency=medium
+
+  * 6563037 - fix error: disable journal log output by default (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Mon, 7 Nov 2022 12:57:05 -0800
+
+jupiter-fan-control (20221031.1) unstable; urgency=medium
+
+  * aa5c7f6 - disable stdout logging by default (Adam Weld <weld@valvesoftware.com>)
+  * 754026d - Reduce SSD polling frequency and update maximum temps from devices at runtime (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Mon, 31 Oct 2022 16:53:16 -0700
+
+jupiter-fan-control (20221028.1) unstable; urgency=medium
+
+  * e79a5bd - ? (Adam Weld <weld@valvesoftware.com>)
+  * ba8747f - re-enable bios check (Adam Weld <weld@valvesoftware.com>)
+  * cd50147 - hardcoded bios version to work with 2023 mb that breaks version spec (Adam Weld <weld@valvesoftware.com>)
+  * 8a4503c - ??? (Adam Weld <weld@valvesoftware.com>)
+  * 07bab00 - initial test commit (Adam Weld <weld@valvesoftware.com>)
+  * 1c45300 - initial branch commit (Adam Weld <weld@valvesoftware.com>)
+  * cd4b967 - new branch initial commit (Adam Weld <weld@valvesoftware.com>)
+  * e498b29 - updates (Adam Weld <weld@valvesoftware.com>)
+  * f40593b - updates (Adam Weld <weld@valvesoftware.com>)
+  * 09b0e59 - updates (Adam Weld <weld@valvesoftware.com>)
+  * d646a11 - include PKGBUILD for testing (Adam Weld <weld@valvesoftware.com>)
+  * 1f910ca - testing the ability to pull critical temperature from devices (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Fri, 28 Oct 2022 14:52:14 -0700
+
+jupiter-fan-control (20220705.1) unstable; urgency=medium
+
+  * 81c8a5a - fixed bug where fan can get stuck at 2000 rpm (Adam Weld <adam.weld@gmail.com>)
+
+ -- Adam Weld <adam.weld@gmail.com>  Tue, 5 Jul 2022 14:03:20 -0700
+
+jupiter-fan-control (20220602.1) unstable; urgency=medium
+
+  * a7bf922 - rolling latest fancontrol.py changes while keeping config profile the same (Adam Weld <weld@valvesoftware.com>)
+  * 3949ce9 - update config file to t_target (Adam Weld <weld@valvesoftware.com>)
+  * d056b92 - update config file to t_target (Adam Weld <weld@valvesoftware.com>)
+  * 17be6e5 - revert to static (Adam Weld <weld@valvesoftware.com>)
+  * a6b4953 - bios compatibility check working (Adam Weld <weld@valvesoftware.com>)
+  * 51358d8 - os -> subprocess (Adam Weld <weld@valvesoftware.com>)
+  * 56a1f90 - os -> subprocess (Adam Weld <weld@valvesoftware.com>)
+  * 7fedeeb - typo (Adam Weld <weld@valvesoftware.com>)
+  * adef607 - added version print (Adam Weld <weld@valvesoftware.com>)
+  * 66233e1 - testing bios compat checker (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Thu, 2 Jun 2022 15:41:05 -0700
+
+jupiter-fan-control (20220512.1) unstable; urgency=medium
+
+  * 66b3125 - min fan speed 1500 -> 2000 (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Thu, 12 May 2022 17:20:33 -0700
+
+jupiter-fan-control (20220511.2) unstable; urgency=medium
+
+  * 1c15abe - removed unnecessarily verbose print (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Wed, 11 May 2022 15:33:45 -0700
+
+jupiter-fan-control (20220511.1) unstable; urgency=medium
+
+  * ef1ff0b - better charge monitoring (Adam Weld <weld@valvesoftware.com>)
+  * df5f95a - python linting, specify encoding, function descriptors (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Wed, 11 May 2022 15:25:24 -0700
+
+jupiter-fan-control (20220510.2) unstable; urgency=medium
+
+  * f4937ef - code cleanup, reduced inner loop from 10hz to 5hz (Adam Weld <weld@valvesoftware.com>)
+  * 7b0dddf - code cleanup, reduced inner loop from 10hz to 5hz (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Tue, 10 May 2022 16:33:25 -0700
+
+jupiter-fan-control (20220510.1) unstable; urgency=medium
+
+  * 7c4f2c3 - quiet -> balanced profile (Adam Weld <weld@valvesoftware.com>)
+  * 1b23008 - updates to default config values, wind down specified sep. from wind up (Adam Weld <weld@valvesoftware.com>)
+  * c2a4e2f - merging in feed-forward branch for testing (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Tue, 10 May 2022 14:24:21 -0700
+
+jupiter-fan-control (20220428.1) unstable; urgency=medium
+
+  * f3de9fa - updating default gain (Adam Weld <weld@valvesoftware.com>)
+  * c5d8391 - expose fan gain in config (Adam Weld <adam.weld@gmail.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Thu, 28 Apr 2022 16:21:08 -0700
+
+jupiter-fan-control (20220426.1) unstable; urgency=medium
+
+  * e33a637 - main catch for ec stealing control (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Tue, 26 Apr 2022 12:19:19 -0700
+
+jupiter-fan-control (20220425.1) unstable; urgency=medium
+
+  * 869bc53 - added exit handler, fixed file misplacement (Adam Weld <weld@valvesoftware.com>)
+  * 628f59e - added exit handler (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Mon, 25 Apr 2022 17:32:41 -0700
+
+jupiter-fan-control (20220421.2) unstable; urgency=medium
+
+  * 9d6fb8b - reduce logging verbosity in journal (Adam Weld <weld@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Thu, 21 Apr 2022 16:29:02 -0700
+
+jupiter-fan-control (20220412.3) unstable; urgency=medium
+
+  * 05647ad - fixed typo (christianm <christianm@valvesoftware.com>)
+  * a6296be - increased max fanspeed to 7300 (Adam Weld <weld@valvesoftware.com>)
+  * 11a9415 - changed variable name -> hwmon_name (Adam Weld <weld@valvesoftware.com>)
+  * 64bf697 - adding back linked service (christianm <christianm@valvesoftware.com>)
+  * 970f7ba - Recreate structure (christianm <christianm@valvesoftware.com>)
+  * 8cf5671 - remove enabled service (christianm <christianm@valvesoftware.com>)
+  * 545447a - pruned README for most users and fixed commits (christianm <christianm@valvesoftware.com>)
+  * 02e7620 - Revert "converting to form that is easier to pkg" (Christian Marchesell <christianm@valvesoftware.com>)
+  * 747040e - Delete README.md for jupiter (Christian Marchesell <christianm@valvesoftware.com>)
+  * 30af14e - converting to form that is easier to pkg (christianm <christianm@valvesoftware.com>)
+  * 47762e8 - moving everything into /usr/share/jupiter-fan-control (christianm <christianm@valvesoftware.com>)
+  * 2c4612b - Clean up developer tools and move to development branch (christianm <christianm@valvesoftware.com>)
+  * 66ab5bf - removed dev script (Adam Weld <weld@valvesoftware.com>)
+  * e8f9dfb - revert (Adam Weld <weld@valvesoftware.com>)
+  * a04069a - skipping sha sumcheck for testing (Adam Weld <weld@valvesoftware.com>)
+
+ -- christianm <christianm@valvesoftware.com>  Tue, 12 Apr 2022 18:19:45 -0700
+
+

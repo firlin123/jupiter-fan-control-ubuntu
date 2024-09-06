@@ -1,0 +1,11 @@
+Source: jupiter-fan-control
+Section: utils
+Priority: optional
+Maintainer: Adam Weld <weld@valvesoftware.com>, Christian Marcheselli <christianm@valvesoftware.com>
+Standards-Version: 4.7.0
+
+Package: jupiter-fan-control
+Architecture: all
+Depends: python3-yaml, python3 (>= 3.11)
+Description: Jupiter fan controller
+
