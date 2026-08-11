@@ -1,3 +1,10 @@
+jupiter-fan-control (20260422.2-2) unstable; urgency=medium
+
+  * 460e459 - Do not mask hwmon lookup failure during fan init (Matthew Schwartz <matthew.schwartz@linux.dev>)
+  * e58566f - Support indexed thermal hwmon names (Matthew Schwartz <matthew.schwartz@linux.dev>)
+
+ -- Matthew Schwartz <matthew.schwartz@linux.dev>  Wed, 29 Jul 2026 14:12:30 -0700
+
 jupiter-fan-control (20260422.2) unstable; urgency=medium
 
   * 6182cb1 - Fremont config & improvements (Adam Weld <weld@valvesoftware.com>)
@@ -230,6 +237,11 @@ jupiter-fan-control (20220421.2) unstable; urgency=medium
 jupiter-fan-control (20220412.3) unstable; urgency=medium
 
   * 05647ad - fixed typo (christianm <christianm@valvesoftware.com>)
+
+ -- christianm <christianm@valvesoftware.com>  Tue, 12 Apr 2022 18:19:45 -0700
+
+jupiter-fan-control (20220412.2) unstable; urgency=medium
+
   * a6296be - increased max fanspeed to 7300 (Adam Weld <weld@valvesoftware.com>)
   * 11a9415 - changed variable name -> hwmon_name (Adam Weld <weld@valvesoftware.com>)
   * 64bf697 - adding back linked service (christianm <christianm@valvesoftware.com>)
@@ -238,6 +250,11 @@ jupiter-fan-control (20220412.3) unstable; urgency=medium
   * 545447a - pruned README for most users and fixed commits (christianm <christianm@valvesoftware.com>)
   * 02e7620 - Revert "converting to form that is easier to pkg" (Christian Marchesell <christianm@valvesoftware.com>)
   * 747040e - Delete README.md for jupiter (Christian Marchesell <christianm@valvesoftware.com>)
+
+ -- Adam Weld <weld@valvesoftware.com>  Tue, 12 Apr 2022 16:35:09 -0700
+
+jupiter-fan-control (20220412.1) unstable; urgency=medium
+
   * 30af14e - converting to form that is easier to pkg (christianm <christianm@valvesoftware.com>)
   * 47762e8 - moving everything into /usr/share/jupiter-fan-control (christianm <christianm@valvesoftware.com>)
   * 2c4612b - Clean up developer tools and move to development branch (christianm <christianm@valvesoftware.com>)
@@ -245,6 +262,6 @@ jupiter-fan-control (20220412.3) unstable; urgency=medium
   * e8f9dfb - revert (Adam Weld <weld@valvesoftware.com>)
   * a04069a - skipping sha sumcheck for testing (Adam Weld <weld@valvesoftware.com>)
 
- -- christianm <christianm@valvesoftware.com>  Tue, 12 Apr 2022 18:19:45 -0700
+ -- christianm <christianm@valvesoftware.com>  Tue, 12 Apr 2022 15:01:01 -0700
 
 

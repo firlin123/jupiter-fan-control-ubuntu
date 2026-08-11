@@ -388,14 +388,27 @@ class Sensor:
 
 def get_full_path(base_path, name) -> str:
     """helper function to find correct hwmon* path for a given device name"""
+    indexed_matches = []
+
     for directory in os.listdir(base_path):
-        full_path = base_path + directory + "/"
+        full_path = os.path.join(base_path, directory)
         try:
-            test_name = open(full_path + "name", encoding="utf8").read().strip()
+            with open(os.path.join(full_path, "name"), encoding="utf8") as name_file:
+                test_name = name_file.read().strip()
             if test_name == name:
-                return full_path
+                return full_path + "/"
+
+            prefix = name + "_"
+            if test_name.startswith(prefix):
+                suffix = test_name[len(prefix) :]
+                if suffix.isdecimal():
+                    indexed_matches.append((int(suffix), full_path))
         except Exception:
             pass
+
+    if indexed_matches:
+        _, full_path = min(indexed_matches)
+        return full_path + "/"
 
     raise FileNotFoundError(f"failed to find device {name}")
 
@@ -455,8 +468,8 @@ class FanController:
             fan_path = get_full_path(
                 self.base_hwmon_path, self.config["fan_hwmon_name_alt"]
             )
-        finally:
-            self.fan = Fan(fan_path, self.config, dmi)
+
+        self.fan = Fan(fan_path, self.config, dmi)
 
     def print_single(self, source_name):
         """pretty print all device values, temp source, and output"""

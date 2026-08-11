@@ -2,9 +2,9 @@
 
 PKGBASE="jupiter-fan-control"
 PKGVER="20260422.2"
-PKGREL="1"
+PKGREL="2"
 
-TAG="20260422.2"
+TAG="matts/7.2-fix"
 SRCNAME="jupiter-fan-control"
 
 pkg_name="$PKGBASE-$PKGVER"
@@ -15,16 +15,47 @@ script=$(realpath "$0")
 function generate_changelog {
     seen_hashes=()
     out=""
+
+    all_tags=$(git tag --list)
+
+    if ! grep -qxF "$TAG" <<< "$all_tags"; then
+        if [[ -z "$all_tags" ]]; then
+            all_tags="$TAG"
+        else
+            all_tags="$all_tags"$'\n'"$TAG"
+        fi
+    fi
+
+    sorted_tags=$(
+        echo "$all_tags" | while read -r t; do
+            if [[ -z "$t" ]]; then continue; fi
+            v="${t#fancontrol-}"
+            v="${v#fan-control-}"
+            echo "$v $t"
+        done | sort -V | awk '{print $2}'
+    )
+
     while read -r tag; do
-        if ! [[ "$tag" =~ ^[0-9]{8}(\.[0-9]+)?$ ]]; then
+        if [[ -z "$tag" ]]; then
             continue
+        fi
+
+        if ! [[ "$tag" =~ ^(fan-?control-)?[0-9]{8}(\.[0-9]+)?$ ]] && [[ "$tag" != "$TAG" ]]; then
+            continue
+        fi
+
+        changelog_ver="${tag#fancontrol-}"
+        changelog_ver="${changelog_ver#fan-control-}"
+
+        if ! [[ "$tag" =~ ^(fan-?control-)?[0-9]{8}(\.[0-9]+)?$ ]]; then
+            changelog_ver="${PKGVER}-${PKGREL}"
         fi
 
         change=""
 
         tag_date=$(git log -1 --format=%ad --date=rfc "$tag")
 
-        change+="${PKGBASE} (${tag}) unstable; urgency=medium"
+        change+="${PKGBASE} (${changelog_ver}) unstable; urgency=medium"
         change+=$'\n\n'
 
         has_commits=false
@@ -48,7 +79,7 @@ function generate_changelog {
         change+=$'\n\n'
 
         out="$change$out"
-    done < <(git tag --list --sort=v:refname)
+    done <<< "$sorted_tags"
     echo "$out"
 }
 
